@@ -21,11 +21,11 @@ def pregunta_2(nota: int):
     elif nota <45:
         return "Espantoso (D)"
     elif nota < 60:
-        return "Pobre (T)"
+        return "Pobre (P)"
     elif nota < 75:
         return "Aceptable (A)"
     elif nota < 90:
-        return "Supera las expectativas (E)"
+        return "Supera las Expectativas (E)"
     elif nota < 100:
         return "Sobresaliente (O)"
     else:
@@ -80,14 +80,14 @@ def pregunta_4(g:int, t:int):
     contador_anios = 0
     while g < t:
         if g < 500:
-            interes_ganado = g * 0.1
+            interes_ganado = (g * 10) // 100
         elif g < 1000:
-            interes_ganado = g * 0.06
+            interes_ganado = (g * 6) // 100
         else:
-            interes_ganado = g * 0.03
+            interes_ganado = (g * 3) // 100
 
         g += interes_ganado
         contador_anios += 1
     return contador_anios
 
-print(pregunta_4(1000, 1500))
+print(pregunta_4(1000, 1400))
